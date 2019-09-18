@@ -30,5 +30,5 @@ class Show < ActiveRecord::Base
     # returns an array of all the shows sorted by alphabetical order according o names
     # hint: use order active record method
   end
-  
+
 end
