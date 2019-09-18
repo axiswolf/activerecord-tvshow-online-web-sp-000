@@ -8,7 +8,7 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     # return the show with the highest rating
-    Show.where("name = ?", maximum[:rating])
+    Show.where(rating: highest_rating)
   end
 
   def self.lowest_rating
