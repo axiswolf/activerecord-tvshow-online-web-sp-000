@@ -3,7 +3,7 @@ class Show < ActiveRecord::Base
 # inherits from ActiveRecord::Base
   def highest_rating
     # return the highest value in the ratings column
-    Show.maximum(:rating)
+    self.maximum(:rating)
   end
 
   def most_popular_show
