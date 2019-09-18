@@ -1,9 +1,9 @@
 # define show class
 class Show < ActiveRecord::Base
 # inherits from ActiveRecord::Base
-  def highest_rating
+  def self.highest_rating
     # return the highest value in the ratings column
-    self.maximum(:rating)
+    Show.maximum(:rating)
   end
 
   def most_popular_show
