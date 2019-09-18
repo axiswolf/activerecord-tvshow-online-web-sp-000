@@ -6,24 +6,24 @@ class Show < ActiveRecord::Base
     Show.maximum(:rating)
   end
 
-  def most_popular_show
+  def self.most_popular_show
     # return the show with the highest rating
-    self.where("name = maximum[:rating]")
+    Show.where("name = maximum[:rating]")
   end
 
-  def lowest_rating
+  def self.lowest_rating
     #returns the lowest value in the ratings column
-    self.minimum(:rating)
+    Show.minimum(:rating)
   end
 
-  def least_popular_show
+  def self.least_popular_show
     # returns the show with the lowest rating
-    self.where("name = minimum[:rating]")
+    Show.where("name = minimum[:rating]")
   end
 
-  def ratings_sum
+  def self.ratings_sum
     #returns the sum of all ratings_sum
-    self.sum(:rating)
+    Show.sum(:rating)
   end
 
   def popular_shows
