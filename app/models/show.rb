@@ -3,6 +3,7 @@ class Show < ActiveRecord::Base
 # inherits from ActiveRecord::Base
   def highest_rating
     # return the highest value in the ratings column
+    
   end
 
   def most_popular_show
@@ -19,6 +20,7 @@ class Show < ActiveRecord::Base
 
   def ratings_sum
     #returns the sum of all ratings_sum
+    Show.sum(:rating)
   end
 
   def popular_shows
