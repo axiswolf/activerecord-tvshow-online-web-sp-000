@@ -18,6 +18,7 @@ class Show < ActiveRecord::Base
 
   def least_popular_show
     # returns the show with the lowest rating
+    Show.where("name = minimum[:rating]")
   end
 
   def ratings_sum
@@ -28,6 +29,7 @@ class Show < ActiveRecord::Base
   def popular_shows
     #returns an array of all the shows that have a rating greater than 5
     # use where Active Record method
+    Show.where("rating > ?", 5)
   end
 
   def shows_by_alphabetical_order
